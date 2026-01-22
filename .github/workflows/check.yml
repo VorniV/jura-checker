@@ -1,8 +1,9 @@
 name: Jura Checker
 
 on:
+  push:
   schedule:
-    - cron: '0/5 * * * *'  # Alle 5 Minuten
+    - cron: '*/7 * * * *'  # Alle 7 Minuten
   workflow_dispatch:       # Erlaubt manuellen Start zum Testen
 
 jobs:
