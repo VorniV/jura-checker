@@ -9,7 +9,7 @@ import sys
 URLS = [
     "https://www.justiz-bw.de/,Lde/Startseite/Ausbildung/Zweite+juristische+Staatspruefung",
     "https://www.berlin.de/sen/justiz/juristenausbildung/juristische-pruefungen/",
-    "https://worldtimeapi.org/api/timezone/Europe/Berlin.txt",
+    "https://httpbin.org/uuid",
 ]
 
 # Secrets aus GitHub laden
