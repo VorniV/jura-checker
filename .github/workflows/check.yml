@@ -1,0 +1,39 @@
+name: Jura Checker
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'  # Alle 5 Minuten
+  workflow_dispatch:       # Erlaubt manuellen Start zum Testen
+
+jobs:
+  check_websites:
+    runs-on: ubuntu-latest
+    
+    # Wichtig: Erlaubnis, Dateien ins Repo zurückzuschreiben
+    permissions:
+      contents: write
+
+    steps:
+      - name: Code auschecken
+        uses: actions/checkout@v4
+
+      - name: Python einrichten
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip' # <--- Hier ist unser Cache!
+
+      - name: Bibliotheken installieren
+        run: pip install -r requirements.txt
+
+      - name: Skript ausführen
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          CHAT_ID: ${{ secrets.CHAT_ID }}
+        run: python main.py
+
+      - name: Änderungen speichern
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Status Update: Änderung erkannt"
+          file_pattern: '*.txt'
