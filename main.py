@@ -7,8 +7,6 @@ import sys
 # --- KONFIGURATION ---
 # Trage hier die echten Links zu den Jura-Seiten ein
 URLS = [
-    "https://www.justiz-bw.de/,Lde/Startseite/Ausbildung/Zweite+juristische+Staatspruefung",
-    "https://www.berlin.de/sen/justiz/juristenausbildung/juristische-pruefungen/",
     "https://httpbin.org/uuid",
 ]
 
