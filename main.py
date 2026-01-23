@@ -7,7 +7,10 @@ import sys
 # --- KONFIGURATION ---
 # Trage hier die echten Links zu den Jura-Seiten ein
 URLS = [
-    "https://httpbin.org/uuid",
+    #"https://httpbin.org/uuid",
+    "https://www.olg-hamm.nrw.de/aufgaben/geschaeftsverteilung/verwaltung/dez05-neu/01_Einstellungsverfahren/index.php",
+    "https://www.olg-koeln.nrw.de/aufgaben/referendarabteilung/002_aktuelles/003_zw_aktuelles/001_restplaetze/index.php",
+    "https://www.olg-duesseldorf.nrw.de/aufgaben/referendarabteilung/09_weiter_info/index.php",
 ]
 
 # Secrets aus GitHub laden
